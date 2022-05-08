@@ -200,3 +200,39 @@ function twoSum(nums, target) {
 }
 
 console.log(twoSum([2, 3, 1, 5, 7], 5));
+
+
+// func binarySearch(arr[]int, target int) int {
+//     left:= 0
+//     right:= len(arr) - 1
+//     for left <= right {
+//         mid:= (right + left) / 2
+// 		if arr[mid] == target {
+//             return mid
+//         } else if target < arr[mid] {
+//             right = mid - 1
+//         } else {
+//         left = mid + 1
+//     }
+// }
+// return -1
+// }
+
+//-- fibonaci sequence
+// func fibonaci(i int)(ret int) {
+//     if i == 0 {
+//         return 0 //base case
+//     }
+//     if i == 1 {
+//         return 1 //base case
+//     }
+//     return fibonaci(i - 1) + fibonaci(i - 2)
+// }
+
+//-- Factorial
+// func fact(n int) int {
+//     if n >= 1 {
+//         return n * fact(n - 1) //recursive case
+//     }
+//     return 1 //base case
+// }
