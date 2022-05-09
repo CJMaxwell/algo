@@ -6,12 +6,12 @@ console.log(reverseWord('Hello'));
 
 function palindrome(str) {
     // Step 1. Lowercase the string and use the RegExp to remove unwanted characters from it
-    var re = /[\W_]/g; // or var re = /[^A-Za-z0-9]/g;
+    let re = /[\W_]/g; // or let re = /[^A-Za-z0-9]/g;
 
-    var lowRegStr = str.toLowerCase().replace(re, '');
+    let lowRegStr = str.toLowerCase().replace(re, '');
 
     // Step 2. Use the same chaining methods with built-in functions from the previous article 'Three Ways to Reverse a String in JavaScript'
-    var reverseStr = lowRegStr.split('').reverse().join('');
+    let reverseStr = lowRegStr.split('').reverse().join('');
 
     // Step 3. Check if reverseStr is strictly equals to lowRegStr and return a Boolean
     return reverseStr === lowRegStr; // "amanaplanacanalpanama" === "amanaplanacanalpanama"? => true
@@ -33,19 +33,18 @@ findLongestWord("The quick brown fox jumped over the lazy dog");
 //4. Longest substring without repeating characters
 
 function lengthOfLongestSubstring(s) {
-    var startIdx = 0
-    // var endIdx = 0
-    var maxLength = 0
+    let startIdx = 0
+    // let endIdx = 0
+    let maxLength = 0
 
-    var curSet = new Set()
+    let curSet = new Set()
 
     for (let endIdx = 0; endIdx < s.length; endIdx++) {
         if (curSet.has(s[endIdx])) {
-            var prevEndIdx = Math.max(endIdx - 1, 0)
+            let prevEndIdx = Math.max(endIdx - 1, 0)
             maxLength = Math.max(prevEndIdx - startIdx + 1, maxLength)
 
             while (s[startIdx] !== s[endIdx]) {
-                // window left The border shrinks to the right and updates curSet 
                 curSet.delete(s[startIdx++])
             }
 
